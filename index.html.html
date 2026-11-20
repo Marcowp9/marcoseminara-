@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marco Seminara — Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&family=Lora:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#faf6ec;--fg:#0b0b0b;--mut:#5b5649;--line:#d9d2bf;--red:#b82a35;--y:#ffcf33;--g:#1f7a4d;--b:#2457c5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e0e;--fg:#f4efe3;--mut:#a8a293;--line:#2e2c27;--red:#e0434f;--g:#2e9d66;--b:#4f83f0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0e0e;--fg:#f4efe3;--mut:#a8a293;--line:#2e2c27;--red:#e0434f;--g:#2e9d66;--b:#4f83f0;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5rem);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.05rem/1.55 Lora,Georgia,"Times New Roman",serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,b,summary,.num,.eye,.tag,.btn,.top{font-family:Archivo,"Arial Black",Impact,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:.3rem solid var(--fg)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.7rem 0}
+.top strong{font:900 clamp(1.4rem,5.5vw,2rem)/.95 Archivo,sans-serif;letter-spacing:-.03em}
+.burger{flex:none;width:3rem;height:3rem;border:0;background:none;color:var(--fg);cursor:pointer}
+.burger i,.burger i::before,.burger i::after{display:block;width:2rem;height:.22rem;background:currentColor;margin:auto;position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0}
+.burger i::before{top:-.55rem}.burger i::after{top:.55rem}
+.menu{border-top:.2rem solid var(--fg);padding:.5rem 0 1rem}
+.menu a{display:block;padding:.7rem 0;font:800 1.5rem Archivo,sans-serif;text-decoration:none}
+.menu a:hover{color:var(--red)}
+.hero{padding:3rem 0 3.5rem}
+.eye{margin:0 0 1rem;color:var(--red);font-weight:800;font-size:.95rem;letter-spacing:.2em;text-transform:uppercase}
+h1{margin:0;font:900 clamp(3.6rem,16vw,9.5rem)/.86 Archivo,sans-serif;letter-spacing:-.045em}
+.hero p.sub{max-width:38rem;margin:1.75rem 0 0;font-size:clamp(1.15rem,3.6vw,1.45rem);line-height:1.5;color:var(--mut)}
+.btns{display:grid;gap:.9rem;margin-top:2rem;max-width:40rem}
+.btn{display:block;padding:1.1rem 1rem;text-align:center;font:800 1.15rem Archivo,sans-serif;text-decoration:none;border:.2rem solid var(--fg)}
+.btn.r{background:var(--red);border-color:var(--red);color:#fff}
+.btn:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+@media(min-width:40rem){.btns{grid-template-columns:1fr 1fr}}
+.marq{background:var(--red);color:#fff;border-block:.2rem solid var(--fg);overflow:hidden}
+.track{display:flex;width:max-content;animation:m 45s linear infinite}
+.track span{flex:none;white-space:pre;padding:.9rem 0;font:800 clamp(1.3rem,4vw,1.9rem)/1 Archivo,sans-serif}
+@keyframes m{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
+section.s{padding:4rem 0 0}
+.num{display:block;color:var(--red);font-weight:900;font-size:clamp(2.4rem,8vw,3.4rem);line-height:1}
+.eye.l{margin:.9rem 0 .5rem}
+h2{margin:0 0 1.5rem;font:900 clamp(2rem,7.5vw,3.6rem)/1 Archivo,sans-serif;letter-spacing:-.03em;max-width:46rem}
+.covers{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.cover{display:flex;flex-direction:column;min-height:15rem;padding:1.1rem 1.1rem 1.3rem;border:.2rem solid var(--fg);box-shadow:.4rem .4rem 0 var(--fg);text-decoration:none}
+.cover:hover{transform:translate(-.15rem,-.15rem);box-shadow:.6rem .6rem 0 var(--fg)}
+.cover b{margin-top:auto;font:900 clamp(1.45rem,4.2vw,1.8rem)/1.08 Archivo,sans-serif;letter-spacing:-.02em}
+.tag{align-self:flex-start;margin-bottom:1.5rem;padding:.2rem .75rem;background:var(--bg);color:var(--fg);border:.15rem solid var(--fg);border-radius:2rem;font-weight:800;font-size:.8rem;transform:rotate(-3deg)}
+.k0{background:var(--red);color:#fff}.k1{background:var(--y);color:#0b0b0b}.k2{background:var(--g);color:#fff}.k3{background:var(--b);color:#fff}.k4{background:var(--fg);color:var(--bg)}
+.intro{max-width:36rem;margin:-.5rem 0 1.75rem;color:var(--mut);font-size:1.15rem}
+.shelf{margin:0 0 1rem;border:.2rem solid var(--fg);background:var(--bg)}
+.shelf summary{display:flex;align-items:center;gap:.8rem;padding:1rem 1.1rem;font-weight:900;font-size:clamp(1.25rem,4vw,1.6rem);letter-spacing:-.01em;cursor:pointer;list-style:none}
+.shelf summary::-webkit-details-marker{display:none}
+.shelf summary span{flex:1}
+.shelf summary em{font:800 .9rem Archivo,sans-serif;font-style:normal;padding:.15rem .6rem;border:.15rem solid currentColor;border-radius:2rem}
+.shelf summary::after{content:"+";font:800 1.8rem/1 Archivo,sans-serif}
+.shelf[open] summary::after{content:"\2212"}
+.shelf ul{margin:0;padding:0;list-style:none}
+.shelf li a{display:block;padding:.85rem 1.1rem;border-top:1px solid var(--line);text-decoration:none}
+.shelf li a:hover{background:var(--y);color:#0b0b0b}
+.contact{margin-top:5rem;background:#0b0b0b;color:#faf6ec;padding:3.5rem 0 4rem;border-top:.5rem solid var(--red)}
+.contact .num{color:var(--y)}
+.contact .eye{color:var(--y)}
+.contact p{max-width:34rem;margin:0 0 1.5rem;font-size:1.2rem;color:#d8d2c2}
+.mail{display:inline-block;font:900 clamp(1.3rem,5vw,2.6rem)/1.15 Archivo,sans-serif;letter-spacing:-.02em;overflow-wrap:anywhere;color:#0b0b0b;background:var(--y);padding:.6rem 1rem;text-decoration:none;box-shadow:.35rem .35rem 0 var(--red)}
+.mail:hover{background:#fff}
+footer{padding:1.5rem 0 2rem;color:var(--mut);font-size:.9rem;background:var(--bg)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="top"><strong>Marco Seminara – Portfolio</strong><button class="burger" id="bg" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i></button></div>
+<nav class="menu" id="menu" hidden><a href="#vetrina">In vetrina</a><a href="#categorie">Categorie</a><a href="#contatti">Contatti</a></nav>
+</div></header>
+<main>
+<div class="wrap hero">
+<p class="eye">Portfolio</p>
+<h1>Marco<br>Seminara</h1>
+<p class="sub">Sport content producer. Analisi, storie di sport, calciomercato, Fantacalcio e approfondimenti su calcio, tennis, boxe, UFC, motori e pallanuoto.</p>
+<div class="btns"><a class="btn r" href="#vetrina">Leggi gli articoli in vetrina</a><a class="btn" href="#contatti">Contattami</a></div>
+</div>
+<div class="marq" aria-hidden="true"><div class="track" id="track"></div></div>
+<div class="wrap">
+<section class="s" id="vetrina"><span class="num">01</span><p class="eye l">Selezione vetrina</p><h2>I pezzi che raccontano il mio modo di scrivere</h2><div class="covers" id="covers"></div></section>
+<section class="s" id="categorie"><span class="num">02</span><p class="eye l">Tutti gli articoli</p><h2>Scegli uno scaffale</h2><p class="intro" id="count"></p><div id="shelves"></div></section>
+</div>
+<div class="contact" id="contatti"><div class="wrap">
+<span class="num">03</span><p class="eye l">Contatti</p><h2 style="color:#faf6ec">Scrivimi</h2>
+<p>Per collaborazioni, progetti editoriali o per parlare di sport:</p>
+<a class="mail" href="mailto:marcoseminara95@gmail.com">marcoseminara95@gmail.com</a>
+</div></div>
+</main>
+<footer><div class="wrap">Gli articoli sono pubblicati su bet365 News.</div></footer>
+<script>
+const B="https://news.bet365.it/it-it/article/";
+const D=[
+["Serie A","serie-a",[
+["Lazio, è record in Serie A! Miglior partenza di sempre","lazio-record-miglior-partenza-serie-a-gattuso-numeri-statistiche/2026101908244323508"],
+["Milan-Frosinone: analisi, precedenti, dati e statistiche","milan-frosinone-analisi-precedenti-dati-statistiche/2026111811454027572"],
+["Napoli-Lazio: analisi tattica, dati, precedenti e statistiche","napoli-lazio-analisi-tattica-dati-precedenti-statistiche-numeri-serie-a/2026110514393278393"],
+["Juventus-Napoli: analisi, precedenti, dati e statistiche","juventus-napoli-analisi-tattica-precedenti-dati-statistiche-serie-a/2026102913314665651"],
+["Milan-Bologna: analisi tattica, precedenti, dati e statistiche","milan-bologna-analisi-tattica-precedenti-dati-statistiche-serie-a/2026102611484573563"],
+["Inter-Fiorentina: analisi tattica, precedenti e statistiche","inter-fiorentina-analisi-tattica-precedenti-statistiche-serie-a/2026102313351234156"],
+["Milan-Atalanta: analisi, precedenti, dati e statistiche","milan-atalanta-analisi-precedenti-dati-statistiche-serie-a/2026101610541163496"],
+["Allegri contro Conte: precedenti e statistiche degli scontri in Serie A","allegri-contro-conte-i-precedenti-e-le-statistiche-degli-scontri-dei-due-allenatori-in-serie-a-bilancio/2025092610525305017"],
+["Lazio, la situazione degli infortunati: oggi esami per Frattesi, Nuno Tavares e Zaccagni, lungo stop per Šutalo","ift-lazio-situazione-infortunati-oggi-esami-frattesi-nuno-tavares-zaccagni-sutalo-infortunio/2026111612175254710"],
+["Milan-Inter: probabili formazioni del derby, ballottaggi e infortuni","milan-inter-probabili-formazioni-derby-ballottaggi-rabiot-gila-moreira-provedel-martinez-infortuni/2026103015274863593"],
+["Napoli, chi recupera? Probabile formazione, novità e infortuni (Højlund, De Bruyne, Lang)","napoli-chi-recupera-chi-nol-porto-probabile-formazione-novita-infortuni-hojlund-de-bruyne-lang/2026110410463667532"]]],
+["Breaking news","breaking",[
+["Sassuolo, crisi Aquilani: rischio esonero e possibili sostituti","cbn-sassuolo-crisi-aquilani-rischio-esonero-sostituti-analisi/2026110308405899162"],
+["Juventus, crisi Spalletti: rischio esonero, analisi e numeri","bn-juventus-crisi-spalletti-rischio-conte-analisi-numeri-esonero/2026102910025410239"],
+["Cristiano Ronaldo, l’annuncio: addio alla nazionale del Portogallo","cristiano-ronaldo-annuncio-addio-nazionale-portogallo-ritiro/2026110510584394616"],
+["Presentazione del nuovo stadio di Milan e Inter: progetto, costi e capienza","presentazione-nuovo-stadio-milan-inter-progetto-costi-capienza-san-siro/2026102914311464551"]]],
+["Analisi","analisi",[
+["Marcus Thuram, il nuovo leader dell’Inter: Zidane, convocazione, dati e statistiche","ce-marcus-thuram-nuovo-leader-inter-zidane-convocazione-dati-statistiche-numeri/2026110915394877910"],
+["Serie A, la classifica dopo 11 giornate: Lazio, Inter, Roma e i numeri del campionato","serie-a-classifica-dopo-11-giornate-lazio-inter-roma-numeri-statistiche-dati-panoramica-analisi/2026110909024003638"],
+["Bournemouth-Milan 3-0: analisi, Amorim, tattica e turnover (Europa League)","bn-bournemouth-milan-3-0-europa-league-analisi-amorim-tattica-turnover/2026102306584019300"],
+["Napoli, che succede? L’intervista di Allegri, Politano, Højlund, De Bruyne e Lucca","napoli-che-succede-intervista-allegri-politano-hojlund-scintille-de-bruyne-lucca-caos/2026110510035213980"]]],
+["Calciomercato","mercato",[
+["Calciomercato, Gustavo Varela: Juventus e Napoli sul giocatore, sirene estere e Monza all’asta","cc-calciomercato-gustavo-varela-juventus-napoli-sirene-estere-monza-asta/2026111710272316332"],
+["Lazio, il piano di calciomercato: news su Cataldi, Cancellieri e Fabiani","lazio-piano-calciomercato-news-cataldi-cancellieri-man-notizie-fabiani/2026111208515566686"],
+["Qui Milan: Gonçalo Inácio, Endrick, Tresoldi e le news di calciomercato","qui-milan-goncalo-inacio-endrick-tresoldi-calciomercato-news/2026111109031268165"],
+["Qui Napoli: Allegri, Varela, Ovando, Cacciamani e le notizie di calciomercato","qui-napoli-allegri-varela-ovando-cacciamani-notizie-calciomercato-news/2026111112132859705"]]],
+["Coppe e Europa","coppe",[
+["Feyenoord-Inter: analisi tattica, precedenti, dati e statistiche","feyenoord-inter-analisi-tattica-precedenti-dati-statistiche/2026110213464720755"],
+["Milan-Ferencváros: analisi tattica, precedenti, dati e statistiche","milan-ferencvaros-analisi-tattica-precedenti-dati-statistiche-europa-league/2026110315345876913"],
+["Lens-Como: analisi, dati, precedenti e statistiche (Champions League)","lens-como-analisi-dati-precedenti-statistiche-uefa-champions-league/2026110311452812287"],
+["Bournemouth-Milan: analisi tattica, precedenti e statistiche (Europa League)","bournemouth-milan-analisi-tattica-precedenti-statistiche-europa-league/2026102110502361055"],
+["Como-Manchester United: analisi, dati, numeri e statistiche (Champions League)","uefa-champions-league-como-manchester-united-analisi-dati-numeri-statistiche/2026102010293479527"],
+["Salisburgo-Milan: analisi tattica, precedenti e statistiche (Europa League)","cp-salisburgo-milan-analisi-tattica-precedenti-statistiche-partita-europa-league/2026101310045405583"],
+["Villarreal-Napoli: analisi, precedenti e statistiche (Champions League)","villarreal-napoli-analisi-precedenti-statistiche-partita-uefa-champions-league/2026101213062977278"]]],
+["Fantacalcio","fantacalcio",[
+["Quando torna Lautaro Martínez? Il piano dell’Inter","fc-fantacalcio-quando-torna-lautaro-martinez-piano-chivu-inter-infortunio-rientro/2026111708502899505"],
+["Milan, chi rientra dopo la sosta? Infortuni e casi al Fantacalcio","bn-milan-chi-rientra-dopo-la-sosta-infortuni-casi-fantacalcio-maignan-pavlovic-tomori/2026111808020573542"],
+["Consigli Fantacalcio 11ª giornata: 5 giocatori imperdibili","fc-consigli-fantacalcio-11-giornata-5-giocatori-scommesse-da-schierare-serie-a/2026110608463336083"],
+["Frosinone, infortunio Raimondo: condizioni e tempi di recupero","ift-frosinone-infortunio-raimondo-condizioni-tempi-recupero-fantacalcio/2026110210351203812"],
+["Fantacalcio, chi schierare in porta alla 6ª giornata","fc-fantacalcio-chi-schierare-in-porta-6-giornata-ecco-la-scelta-dei-portieri/2026100909295941501"],
+["Oggi giocherebbero così: le formazioni tipo di Serie A 2026/2027","ayn-oggi-giocherebbero-cosi-formazioni-tipo-squadre-serie-a-2026-2027-fantacalcio/2026073111202347082"],
+["Consigli Fantacalcio 12ª giornata: 5 giocatori da schierare","consigli-fantacalcio-ecco-5-giocatori-da-schierare-alla-12a-giornata-di-serie-a/2025112010125067600"],
+["Consigli Fantacalcio: 5 giocatori da schierare all’ottava giornata","consigli-fantacalcio-ecco-5-giocatori-da-schierare-all-ottava-giornata-di-serie-a/2025102315191306248"],
+["Fantacalcio, tutte le probabili formazioni della settima giornata","fantacalcio-tutte-le-probabili-formazioni-della-settima-giornata-di-serie-a/2025101516024892725"],
+["Consigli Fantacalcio: 5 giocatori da schierare alla quarta giornata","consigli-fantacalcio-ecco-5-giocatori-da-schierare-alla-quarta-giornata-di-serie-a/2025091712151196842"],
+["Fantacalcio, chi schierare in porta alla 11ª giornata: la scelta dei portieri e i consigli","fc-fantacalcio-chi-schierare-porta-11-giornata-scelta-portieri-consigli/2026110607485322337"],
+["Consigli Fantacalcio 9ª giornata: 5 centrocampisti da schierare","fc-fantacalcio-consigli-9-giornata-5-centrocampisti-da-schierare/2026102710540451755"]]],
+["Mondiali 2026","mondiali",[
+["Mondiali 2026: calendario, date e dove vederli in TV","mondiali-2026-calendario-date-e-dove-vederli-in-tv/2024011411011719464"],
+["Mondiali 2026: date, format, novità, calendario e dove vederli in tv e streaming","mondiali-2026-date-format-novita-calendario-e-dove-vederli-in-tv-e-streaming/2026050310075967914"],
+["Mondiali 2026: il calendario completo e il tabellone scaricabile","mondiali-2026-il-calendario-completo-e-il-tabellone-scaricabile-del-torneo/2026060311072888956"],
+["Mondiali 2026: squadre qualificate, calendario e partite degli ottavi di finale","mondiali-2026-squadre-qualificate-calendario-e-partite-degli-ottavi-di-finale/2026070214065698304"],
+["Messi e i rigori: un record negativo al Mondiale con l’Argentina","messi-argentina-record-negativo-rigori-mondiale-2026/2026070807015667642"],
+["Mondiali 2026: ecco le squadre qualificate alle semifinali","mondiali-2026-ecco-le-squadre-qualificate-alle-semifinali/2026071010280534974"],
+["Mondiali 2026, il quadro dei diffidati: regolamento sulle squalifiche e chi rischia per le semifinali","mondiali-2026-il-quadro-dei-diffidati-il-regolamento-sulle-squalifiche-e-chi-rischia-per-le-semifinali/2026071013100334061"]]],
+["Nazionali e Nations League","nazionali",[
+["Amichevoli internazionali, Croazia-Belgio: data, orario, probabili formazioni","amichevoli-internazionali-croazia-belgio-data-orario-probabili-formazioni-e-dove-vederla-in-tv-e-in-streaming/2026060115201350272"],
+["Amichevoli internazionali, Olanda-Algeria: data, orario, probabili formazioni","amichevoli-internazionali-olanda-algeria-data-orario-probabili-formazioni-e-dove-vederla-in-tv-e-in-streaming/2026060215090037185"],
+["Amichevoli internazionali, Francia-Costa d’Avorio: data, orario, probabili formazioni","amichevoli-internazionali-francia-costa-davorio-data-orario-probabili-formazioni-e-dove-vederla-in-tv-e-in-streaming/2026060314564551519"],
+["Nations League, Italia-Belgio: data, orario, probabili formazioni","cp-nations-league-italia-belgio-data-orario-probabili-formazioni-dove-vederla-tv-streaming/2026092310571577481"],
+["Amichevoli internazionali, Singapore-Brasile: data, orario, probabili formazioni","cp-amichevoli-internazionali-singapore-brasile-data-orario-probabili-formazioni-dove-vederla-tv-streaming/2026111616201229602"],
+["Uruguay-Repubblica Dominicana: data, probabili formazioni, orario e dove vederla","cp-uruguay-repubblica-dominicana-data-probabili-formazioni-orario-dove-vederla/2026111715100721618"]]],
+["Serie B e Serie C","serie-bc",[
+["Sampdoria-Benevento: data, orario, probabili formazioni e dove vederla","cp-sampdoria-benevento-data-orario-probabili-formazioni-dove-vederla-tv-streaming/2026111809304160933"],
+["Hachim Mastour, fenomeno precoce, riparte dalla Virtus Verona in Serie C","hachim-mastour-fenomeno-precoce-riparte-dalla-virtus-verona-in-serie-c/2025063011211734184"],
+["Ravenna, Ronaldinho Day: tribuna R10, prezzi dei biglietti, collection e quanto gioca Dinho","ravenna-ronaldinho-day-tribuna-r10-prezzi-biglietti-collection-quanto-gioca-dinho-maglia/2026111210260698422"]]],
+["Tennis","tennis",[
+["Nitto ATP Finals, Alcaraz vs Medvedev: dati e statistiche","nitto-atp-finals-carlos-alcaraz-vs-daniil-medvedev-dati-statistiche/2026111813031968049"],
+["Tennis, quando gioca Jannik Sinner: calendario, data del rientro e tornei","tennis-quando-gioca-jannik-sinner-calendario-data-rientro-tornei/2026111010582315544"]]],
+["Boxe","boxe",[
+["TAF, Elmaghraby vs Clemente Russo: data, orario, card completa e dove vederlo","taf-clemente-russo-vs-elmaghraby-data-orario-card-completa-dove-vedere-ritorno-tatanka-boxe-pugilato-italia/2026111814180494617"],
+["Canelo Álvarez: età, record, soprannome, storia, patrimonio e curiosità","saul-canelo-alvarez-eta-record-soprannome-storia-patrimonio-e-curiosita-boxe-pugile/2025052214202089905"]]],
+["Motori","f1",[
+["Kimi Antonelli campione del mondo di F1: record e statistiche","kimi-antonelli-campione-del-mondo-f1-record-statistiche/2026110208525363855"],
+["Kimi Antonelli, GP del Messico: condizioni di salute","bn-kimi-antonelli-gp-messico-condizioni-salute-formula-1/2026103008352585446"],
+["Kimi Antonelli campione del mondo in Messico? Scenari e cosa serve","bn-kimi-antonelli-campione-mondo-f1-messico-scenari-cosa-serve/2026102608490458686"]]],
+["UFC e MMA","ufc",[
+["UFC, Moicano vs Nolan: analisi, orario e dove vederlo in Italia","ufc-moicano-nolan-analisi-orario-dove-vedere-italia-mma/2026102714501711819"]]],
+["Pallanuoto","pallanuoto",[
+["Ferencváros, vittoria back-to-back nella Champions League di pallanuoto: campioni d’Europa","ferencvaros-vittoria-back-to-back-della-champions-league-di-pallanuoto-campioni-deuropa/2025061314524103581"],
+["Champions League di pallanuoto (LEN): come stanno andando Pro Recco e Brescia, quando giocano e dove vederle","len-champions-league-come-stanno-andando-pro-recco-brescia-quando-giocano-dove-vedere/2026110911074914242"]]],
+["Storia e curiosità","curiosita",[
+["Il significato dei numeri nel calcio: il 9, il numero di Ronaldo","il-significato-dei-numeri-nel-calcio-il-9-numero-ronaldo/2024111115214251287",1],
+["Milan-Liverpool 2005, a vent’anni dalla notte da incubo di Istanbul","milan-liverpool-2005-a-ventanni-dalla-notte-da-incubo-a-istanbul-uefa-champions-league/2025050713372392555",1],
+["Luis Enrique e il suo PSG nella storia: come ha trasformato Parigi nella squadra più forte del mondo","luis-enrique-e-il-suo-psg-nella-storia-come-ha-trasformato-parigi-nella-squadra-piu-forte-del-mondo/2026060114313911257",1],
+["Il dibattito: chi è il più grande numero 10 della storia del calcio italiano","il-dibattito-chi-e-il-piu-grande-numero-10-della-storia-del-calcio-italiano-roberto-baggio-francesco-totti-alessandro-del-piero/2025021711513669898",1],
+["Le rimonte più leggendarie nella storia della UEFA Champions League","ce-le-rimonte-piu-leggendarie-nella-storia-della-uefa-champions-league/2026101507341193687"],
+["Paris FC: il progetto ambizioso che sfida il Paris Saint-Germain","paris-fc-il-progetto-ambizioso-che-sfida-il-paris-saint-germain/2025082014241013725"],
+["Cosa è cambiato in Brasile: riforme, leggi ad hoc e sponsor per far crescere il Brasileirão","cosa-e-cambiato-in-brasile-riforme-leggi-ad-hoc-e-sponsor-per-permettere-al-calcio-brasiliano-di-crescere-brasileirao/2025070112332762574"],
+["I migliori colpi di mercato di Pantaleo Corvino","i-migliori-colpi-di-mercato-di-pantaleo-corvino-trasferimenti-vucinic-bojinov-jovetic-vlahovic-dorgu/2025041512434832503"],
+["Karagounis: Euro 2004, Panathinaikos-Olympiakos, Ranieri e un ricordo che rimarrà per sempre","karagounis-euro-2004-un-ricordo-che-rimarra-per-sempre-adriano-pallone-doro-il-derby-piu-caldo-niente-come-panathinaikos-olympiakos-ranieri-un-maestro-inter-benfica/2025031015503545960"],
+["Gli acquisti più costosi di Mikel Arteta","ct-gli-acquisti-piu-costosi-di-mikel-arteta/2026111807151247213"],
+["I migliori marcatori del Bayern Monaco in Bundesliga dal 2000/01","ct-i-migliori-marcatori-del-bayern-monaco-in-bundesliga-dalla-stagione-200001/2026111708023373618"],
+["I migliori marcatori inglesi nella Premier League di questo secolo","ct-i-migliori-marcatori-inglesi-nella-premier-league-di-questo-secolo/2026111008073470429"],
+["Chi è Matteo Papaccioli: il gol del Como all’esordio in Champions League, caratteristiche e storia","chi-e-matteo-papaccioli-como-rete-esordio-uefa-champions-league-caratteristiche-storia/2026110509041333900"]]],
+["Altro calcio","altro",[
+["La probabile formazione della Cremonese dopo la fine del calciomercato","la-probabile-formazione-della-cremonese-dopo-la-fine-del-calciomercato/2025090310082466196"],
+["Kings World Cup Nations 2026: date, gruppi, formato e dove vederla","kings-world-cup-nations-2026-date-gruppi-formato-e-dove-vederla-in-tv-e-streaming/2026010711311232559"],
+["Manchester United, la panchina di Carrick in bilico: analisi, numeri e possibili sostituti","manchester-united-panchina-carrick-analisi-situazione-numeri-possibili-sostituti-premier-league/2026111010144366684"],
+["Women’s Champions League, Benfica-Roma: data, orario, probabili formazioni","cp-womens-champions-league-benfica-roma-data-orario-probabili-formazioni-dove-vederla-tv-streaming/2026111711550823157"],
+["Football Manager 27: data di uscita e novità","football-manager-27-data-uscita-novita/2026110310262622496"]]]
+];
+
+const $=id=>document.getElementById(id);
+const K=["k0","k1","k2","k3","k4"];
+let n=0,c=0,cv="",sh="";
+D.forEach(([name,id,items],x)=>{
+ n+=items.length;
+ sh+=`<details class="shelf" id="${id}"${x===0?" open":""}><summary class="${K[x%5]}"><span>${name}</span><em>${items.length}</em></summary><ul>${items.map(i=>`<li><a href="${B+i[1]}" target="_blank" rel="noopener">${i[0]}</a></li>`).join("")}</ul></details>`;
+ items.forEach(i=>{if(i[2])cv+=`<a class="cover ${K[c++%4]}" href="${B+i[1]}" target="_blank" rel="noopener"><span class="tag">${name}</span><b>${i[0]}</b></a>`});
+});
+$("covers").innerHTML=cv;$("shelves").innerHTML=sh;
+$("count").textContent=`${n} articoli in ${D.length} categorie. Apri uno scaffale e scegli cosa leggere.`;
+const T="Marco Seminara ✦ Analisi ✦ Storie di sport ✦ Calciomercato ✦ Fantacalcio ✦ ".repeat(4);
+$("track").innerHTML=`<span>${T}</span><span>${T}</span>`;
+const bg=$("bg"),mn=$("menu");
+bg.addEventListener("click",()=>{const o=mn.hidden;mn.hidden=!o;bg.setAttribute("aria-expanded",o)});
+mn.addEventListener("click",e=>{if(e.target.closest("a")){mn.hidden=true;bg.setAttribute("aria-expanded","false")}});
+function oh(){const d=document.getElementById(location.hash.slice(1));if(d&&d.tagName==="DETAILS")d.open=true}
+addEventListener("hashchange",oh);oh();
+</script>
+</body>
+</html>
